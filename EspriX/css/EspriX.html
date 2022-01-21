@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<!-- saved from url=(0053)http://localhost/EspriX/index.php?change_color=838391 -->
+<html><!--Toutes les pages du site sont en réalité des sous pages de ce fichier php,
+index.php.todo, dans GET, precise dans quelle sous page nous nous trouvons--><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!--EspriX sera le titre de toutes les pages du site-->
+    <title>EspriX</title>
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="./EspriX_files/bootstrap.min.css" rel="stylesheet">
+    <link href="./EspriX_files/general.css" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">  -->
+    <script src="./EspriX_files/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="./EspriX_files/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="./EspriX_files/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+    <script src="./EspriX_files/jquery.min.js"></script>
+
+    <script src="./EspriX_files/index.js"></script>
+    
+</head>
+
+<body style="color:black; font-size:10px;background-color : #838391">
+        <script> var connected = true; </script>
+
+<!--Le code html de la bare de navigation.
+A noter que du php intervient aux niveaux de certaines urls.
+Cf le commentaire ci dessus.-->
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="http://localhost/EspriX/index.php">ExpriX</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+                <a class="nav-link" href="http://localhost/EspriX/index.php?todo=afficher_textes">Les textes<span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="http://localhost/EspriX/index.php?todo=ecrire_texte">Ecrire</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="http://localhost/EspriX/index.php?todo=mes_textes">Mes textes</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="http://localhost/EspriX/index.php?todo=inspiration">Inspiration</a>
+            </li>
+            <li class="nav-item dropdown" id="sign_in_component" style="display: none;">
+                <a class="nav-link dropdown-toggle" href="http://localhost/EspriX/index.php?change_color=838391#" id="navbarDropdown1" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Sign in
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown1">
+                    <form method="post" action="http://localhost/EspriX/index.php?change_color=838391&amp;action=tente_login">
+                        <input class="dropdown-item" type="text" name="login" placeholder="Login">
+                        <input class="dropdown-item" type="password" name="password" placeholder="Password">
+                        <input class="dropdown-item" type="submit" value="Submit">
+                    </form>
+                </div>
+            </li>
+
+            <li class="nav-item dropdown" id="sign_up_component" style="display: none;">
+                <a class="nav-link dropdown-toggle" href="http://localhost/EspriX/index.php?change_color=838391#" id="navbarDropdown2" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Sign up
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown2">
+                    <form method="post" action="http://localhost/EspriX/index.php?change_color=838391&amp;action=sign_up">
+                        <input class="dropdown-item" type="text" name="pseudo" placeholder="Pseudo">
+                        <input class="dropdown-item" type="text" name="promo" placeholder="Promo">
+
+                        <input class="dropdown-item" type="password" name="password_1" placeholder="Password">
+                        <input class="dropdown-item" type="password" name="password_2" placeholder="Confirm password">
+                        <input class="dropdown-item" type="submit" value="Confirm">
+                    </form>
+                </div>
+            </li>
+
+            <li class="nav-item" id="disconnect_button">
+                <a class="nav-link" href="http://localhost/EspriX/index.php?change_color=838391&amp;action=disconnect">sign out</a>
+            </li>
+
+        </ul>
+
+        <form method="post" action="http://localhost/EspriX/index.php?todo=search_text" class="form-inline my-3 my-lg-2" data-dashlane-rid="c6c45168c5505226" data-form-type="">
+            <input class="form-control mr-sm-2" type="search" name="search" placeholder="Keyword" aria-label="Search" data-dashlane-rid="865a44cab8fb64b5" data-form-type="">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit" data-dashlane-rid="c59b250f676477ad" data-form-type="">Search</button>
+        </form>
+    </div>
+</nav>
+
+
+<!-- reaction aux potentielles tentatives de connection :
+-log in
+-log out
+-sign up-->
+<link rel="stylesheet" type="text/css" href="./EspriX_files/welcome_page.css">
+
+
+<!--La page d'accueil du projet.-->
+
+
+
+<!--Obtention des textes, pour ensuite les faire defiler a l'ecran, avec le resume et la possibilité 
+d'aller les lire dans leur integralité-->
+
+
+<!--Affichage en grand du titre du projet-->
+
+<h1 style="margin:2cm; text-align:center">
+  EspriX : Espace de débat de l'Ecole Polytechnique.
+</h1>
+
+<link href="./EspriX_files/general.css" rel="stylesheet">
+
+<!--Un petit espacement par esthetique-->
+
+<div class="small_space"> </div>
+
+
+<!--Choix de la couleur d'arriere plan + message personnalisé-->
+
+<div id="center_me_large"> 
+
+<span><h2 id="couleur_esprit_txt">Quelle est la couleur de l'espriX, bob ?</h2> </span>
+
+</div>
+
+
+   <div id="center_me_small"> 
+
+   <input type="color" value="#ff0000" id="colorWell">
+
+   </div>
+
+
+<!--un peu de java script pour choisir la couleur-->
+<script>
+  var colorWell;
+  var defaultColor = "#0000ff";
+
+  window.addEventListener("load", startup, false);
+  colorWell = document.querySelector("#colorWell");
+
+  function startup() {
+    colorWell.value = defaultColor;
+    console.log('a');
+    colorWell.addEventListener("input", update, false);
+    colorWell.addEventListener("change", update_html, false);
+    colorWell.select();
+    console.log(colorWell);
+  }
+
+  function update(event) {
+    //récupère la value de l'input (la target de l'event est le champ input de couleur)
+    document.body.style.background = event.target.value;
+  }
+
+  function update_html(event) {
+    var couleur = colorWell.value.slice(1);
+    open('index.php?change_color=' + couleur, "_self");
+    console.log('a');
+  }
+</script>
+
+
+<!--On fait defiler les textes-->
+
+<div class="classname" onmouseenter="pause()" onmouseleave="reprendre()" style="vertical-align:middle ; text-align:justify">
+
+  <div id="title"><p> <b>Titre </b> : L’INVITATION AU VOYAGE</p></div>
+  <div id="author"><p><b>Auteur </b>: Baudelaire</p></div>
+  <div id="summary"><p><b>Résumé </b>: L'une des meilleures activités sur cette terre.</p></div>
+  <div id="access_article"><button onclick="location.href=&#39;index.php?todo=display_text&amp;id_text=65&#39;"><span>Aller voir ce texte</span></button></div>
+
+
+  <script>
+    var title = document.getElementById("title");
+    var author = document.getElementById("author");
+    var summary = document.getElementById("summary");
+    var button = document.getElementById("access_article");
+
+    var tab = [["Kant","Qu'est ce que les lumi\u00e8res ?","Sapere Aude !","68"],["Camus","L'Etranger","Aujourd\u2019hui, ...","67"],["Baudelaire","L\u2019ALBATROS","Un oiseau qui nous nous suit ...","64"],["Baudelaire","L\u2019INVITATION AU VOYAGE","L'une des meilleures activit\u00e9s sur cette terre.","65"],["Voltaire","BOLDMIND ET M\u00c9DROSO","Sur la Libert\u00e9 de penser.","66"]];
+    var nb_texts = tab.length;
+    console.log(nb_texts);
+    var count = 0;
+    var interval = setInterval(newtext, 3000); // 3 seconde allouée par texte avant le prochain defilement
+
+
+    function newtext() {
+      var valtitle = tab[count][1];
+      var valauthor = tab[count][0];
+      var valsummary = tab[count][2];
+      var valid = tab[count][3];
+
+      count++;
+      count = count % nb_texts;
+
+      var access_text_html = `<button onclick="location.href='index.php?todo=display_text&id_text=` + valid + `'"><span>Aller voir ce texte</span></button>`;
+
+      setTimeout(function() {
+        title.innerHTML = '<p> <b>Titre </b> : ' + valtitle + '</p>';
+      }, 100);
+      setTimeout(function() {
+        author.innerHTML = '<p><b>Auteur </b>: ' + valauthor + '</p>';
+      }, 100);
+      setTimeout(function() {
+        summary.innerHTML = '<p><b>Résumé </b>: ' + valsummary + '</p>';
+      }, 100);
+      setTimeout(function() {
+        button.innerHTML = access_text_html;
+      }, 100);
+
+    }
+
+
+    //IMPORTANT : Quand la souris de l'utilisateur passe sur un texte, on mets en pause
+    // le defilement
+    function pause() {
+      clearInterval(interval); 
+    }
+
+    // et quand la souris sort de la zone de texte, on reprends le defilement
+    function reprendre() {
+      interval = setInterval(newtext, 1000);
+    }
+  </script>
+</div>
+
+    
+
+</body></html>

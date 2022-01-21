@@ -1,0 +1,372 @@
+
+ textarea {
+    display: block;
+    resize : vertical;
+    width: 100%;
+    max-width: 100%;
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+.topic_button_group button {
+    border:0px solid black ; 
+    /* Green background */
+    background-color:inherit;
+    /* Green border */
+    color: rgb(0, 0, 0);
+    /* White text */
+    padding: 10px 30px;
+    /* Some padding */
+    cursor: pointer;
+    text-align : left;
+    /* Pointer/hand icon */
+    width: 100%;
+    /* Set a width if needed */
+    display: block;
+    /* Make the buttons appear below each other */
+}
+
+#topic_above_title {
+    padding: 10px 30px;
+    text-align: center;
+}
+
+.small_space {
+    margin-top: 1cm;
+}
+
+.title {
+    font-size: xx-large;
+    text-align: center;
+}
+
+#summary {
+    text-align: center;
+
+}
+/* 
+.topic_button_group button:not(:last-child) {
+    border-bottom: none;
+    /* Prevent double borders */
+
+
+
+/* Add a background color on hover */
+
+.topic_button_group button:hover {
+    background-color: #a4bfb6;
+}
+
+.column_small {
+    border:2px solid black ; 
+    float: left;
+    width: 30%;
+}
+
+.column_big {
+    border:2px solid black ; 
+    border-left:0;
+    padding-left: 1cm;
+    padding-top:0.5cm;
+    float: left;
+    width: 69%;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: -apple-system, BlinkMacSystemFont, "segoe ui", roboto, oxygen, ubuntu, cantarell, "fira sans", "droid sans", "helvetica neue", Arial, sans-serif;
+    font-size: 12px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+    background-color: #FFFFFF;
+    margin: 0;
+}
+
+.navtop {
+    background-color: #3f69a8;
+    height: 60px;
+    width: 100%;
+    border: 0;
+}
+
+.navtop div {
+    display: flex;
+    margin: 0 auto;
+    width: 1000px;
+    height: 100%;
+}
+
+.navtop div h1,
+.navtop div a {
+    display: inline-flex;
+    align-items: center;
+}
+
+.navtop div h1 {
+    flex: 1;
+    font-size: 24px;
+    padding: 0;
+    margin: 0;
+    color: #ecf0f6;
+    font-weight: normal;
+}
+
+.navtop div a {
+    padding: 0 20px;
+    text-decoration: none;
+    color: #c5d2e5;
+    font-weight: bold;
+}
+
+.navtop div a i {
+    padding: 2px 8px 0 0;
+}
+
+.navtop div a:hover {
+    color: #ecf0f6;
+}
+
+.content {
+    width: 1000px;
+    margin: 0 auto;
+    word-wrap: break-word;
+
+}
+
+.content h2 {
+    margin-left: 10px;
+    padding: 25px 0 0 5px;
+    font-size: 12px !important;
+    border-bottom: 1px solid #b6adad;
+    color: #666666;
+}
+
+.comment_header h2 {
+    padding: 10px;
+    font-size: 20px;
+    border: 1px solid #b6adad;
+    color: #000000;
+}
+
+
+.comments .comment_header {
+    display: flex;
+    text-align:justify;
+    justify-content: space-between;
+    padding: 7px 0;
+    margin-bottom: 3px;
+    align-items: center;
+}
+
+.comments .comment_header .total {
+    display: inline-block;
+    color: #777777;
+    font-size: 12px;
+    margin-right:20px;
+    width : 70px;
+}
+
+.comments .comment_header .write_comment_btn {
+    margin-right: 0.5cm;
+    margin-left: 20px;
+    margin-bottom: 10px
+}
+
+
+.comments .write_comment_btn,
+.comments .write_comment button {
+    display: inline-block;
+    background-color: #565656;
+    color: #fff;
+    text-decoration: none;
+    margin: 10px 0 0 0;
+    padding: 5px 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: 600;
+    border: 0;
+}
+
+.comments .write_comment_btn:hover,
+.comments .write_comment button:hover {
+    background-color: #636363;
+}
+
+.comments .write_comment {
+    display: none;
+    padding: 20px 0 10px 0;
+}
+
+.comments .write_comment textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    height: 150px;
+    margin-top: 10px;
+}
+
+.comments .write_comment input {
+    display: block;
+    width: 250px;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.comments .write_comment button {
+    cursor: pointer;
+}
+
+.comments .comment {
+    padding-top: 10px;
+}
+
+.comments .comment .pseudo {
+    display: inline;
+    padding: 0 5px 3px 0;
+    margin: 0;
+    font-size: 12px;
+    color: #555555;
+}
+
+.comments .comment .date {
+    color: #888888;
+    font-size: 12px;
+}
+
+.comments .comment .content {
+    padding: 5px 0 5px 0;
+}
+
+.comments .comment .reply_comment_btn {
+    display: inline-block;
+    text-decoration: none;
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #888888;
+}
+
+.comments .comment .replies {
+    padding-left: 30px;
+}
+
+
+
+
+h1{
+    text-align:center;
+}
+
+img{
+    height:auto;
+    width:25rem;
+
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 1cm;
+  }
+
+
+.center2 {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+    padding-bottom: 1cm;
+  }
+
+.title{
+    padding-top: 1cm;
+    padding-bottom: 1cm;
+
+  }
+
+
+
+.form-style-4{
+	width: 100%;
+	font-size: 16px;
+	padding: 30px 30px 30px 30px;
+    border-top: solid 2px black;
+	/* topic */
+}
+.form-style-4 input[type=submit],
+.form-style-4 input[type=button],
+.form-style-4 input[type=text],
+.form-style-4 input[type=email],
+.form-style-4 textarea,
+.form-style-4 label
+{
+	font-family: Georgia, "Times New Roman", Times, serif;
+	font-size: 12px;
+	color: #fff;
+
+}
+.form-style-4 label {
+	display:block;
+	margin-bottom: 10px;
+}
+.form-style-4 label > span{
+	display: inline-block;
+	width: 150px;
+}
+.form-style-4 input[type=text],
+.form-style-4 input[type=email] 
+{
+	background: transparent;
+	border: none;
+	border-bottom: 1px dashed #83A4C5;
+	width: 275px;
+	outline: none;
+	padding: 0px 0px 0px 0px;
+	font-style: italic;
+}
+/* .form-style-4 textarea{
+	font-style: italic;
+	padding: 0px 0px 0px 0px;
+	background: transparent;
+	outline: none;
+	border: none;
+	border-bottom: 1px dashed #83A4C5;
+	width: 275px;
+	overflow: hidden;
+	resize:none;
+	height:20px;
+} */
+
+.form-style-4 textarea:focus, 
+.form-style-4 input[type=text]:focus,
+.form-style-4 input[type=email]:focus,
+.form-style-4 input[type=email] :focus
+{
+	border-bottom: 1px dashed #D9FFA9;
+}
+
+.form-style-4 input[type=submit],
+.form-style-4 input[type=button]{
+	background: #576E86;
+	border: none;
+	padding: 8px 10px 8px 10px;
+	border-radius: 5px;
+	color: #A8BACE;
+}
+.form-style-4 input[type=submit]:hover,
+.form-style-4 input[type=button]:hover{
+background: #394D61;
+}

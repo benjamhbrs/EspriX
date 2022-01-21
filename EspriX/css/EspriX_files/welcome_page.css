@@ -1,0 +1,30 @@
+
+a { color:#FFF}
+
+.classname { 
+  border:solid 1px #2d2d2d ; 
+  vertical-align:middle ; 
+  background:whitesmoke; 
+  padding:20px 20px 20px 20px;  
+  -moz-border-radius: 5px;  
+  -webkit-border-radius: 5px; 
+  border-radius: 5px;}
+
+
+  #center_me_large{
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+  }
+
+  #center_me_small{
+    margin-left: auto;
+    margin-right: auto;
+    width: 2cm;
+    height: 1.5cm;
+
+  }
+
+  #couleur_esprit_txt{
+      text-align: center;;
+  }

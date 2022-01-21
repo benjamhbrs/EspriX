@@ -1,0 +1,30 @@
+.afftitres{
+    background-color : #a4bfb6; 
+    border : solid; 
+    overflow:scroll; 
+    height:100%"
+}
+
+.affsummary{
+    background-color : white; 
+    border : solid; 
+    padding: 20px; 
+    overflow:scroll; 
+    height:100%"
+}
+.topic_button_group button {
+    background-color: #207994;
+    /* Green background */
+    border: 1px solid rgb(128, 0, 28);
+    /* Green border */
+    color: white;
+    /* White text */
+    padding: 10px 24px;
+    /* Some padding */
+    cursor: pointer;
+    /* Pointer/hand icon */
+    width: 100%;
+    /* Set a width if needed */
+    display: block;
+    /* Make the buttons appear below each other */
+}
